@@ -7,7 +7,7 @@
 - Creation of git repository
 
 ### Why
-- Meeting was planned
+- To discuss directions I should follow and getting answers to my questions
 - I need to share what I've done
 
 ### What has learned
@@ -27,10 +27,10 @@
 ### What has done
 - Familiarity with Jupyter Notebook
 - Attending PhD seminar about Learning over unbalanced data 
-- Starting the course on Software carpentry
+- Starting the Python course on Software carpentry
 
 ### Why
-- My supervisers want me to use Jupyter Notebook
+- Jupyter Notebook is nice and easy to share what I've done
 - I should use Python to rewrite the Matlab code
 
 ### What has learned
@@ -40,6 +40,24 @@
 
 ### What next
 - Finish Python course
+- Reimplement what I've done in Python
+- Understand the model
+- Learn MAP
+- Learn optimization processes
+
+## 29.04.16
+### What has done
+- Finished Python course on Software carpentry
+- Read the rules of procedure of LHC
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- Basics of Python: multiple files operations, conditions, functions, errors and exceptions, defensive programming 
+- I can not attend laboratory after 19:00
+
+### What next
 - Reimplement what I've done in Python
 - Understand the model
 - Learn MAP
