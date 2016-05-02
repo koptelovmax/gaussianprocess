@@ -62,3 +62,20 @@
 - Understand the model
 - Learn MAP
 - Learn optimization processes
+
+## 02.05.16
+### What has done
+- Start of reimplementation in Python what I made in Matlab
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- How to use Gaussian distribution in Python
+- How to install and use seaborn library
+
+### What next
+- Continue reimplementation in Python what I made in Matlab
+- Understand the model
+- Learn MAP
+- Learn optimization processes
