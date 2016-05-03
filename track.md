@@ -3,7 +3,7 @@
 ## 27.04.16
 ### What has done
 - Meeting with supervisers
-- Implementation of multivariate distribution with bounds
+- Implementation of conditionals multivariate distribution
 - Creation of git repository
 
 ### Why
@@ -13,7 +13,7 @@
 ### What has learned
 - Different kernels
 - Matrix inverse by Cholesky factorization
-- Multivariate Gaussian distribution with bounds and noise
+- Conditional Multivariate Gaussian distribution with noise and without
 
 ### What next
 - Understand the model
@@ -76,6 +76,23 @@
 
 ### What next
 - Continue reimplementation in Python what I made in Matlab
+- Understand the model
+- Learn MAP
+- Learn optimization processes
+
+## 03.05.16
+### What has done
+- Reimplementation of Multivariate Gaussian distribution in Python using build-in pdf function
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- Array operations in Python using Numpy
+- How to use build-in function for Multivariate Gaussian distribution
+
+### What next
+- Multivariate Gaussian distribution in Python using my own pdf function
 - Understand the model
 - Learn MAP
 - Learn optimization processes
