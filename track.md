@@ -65,7 +65,7 @@
 
 ## 02.05.16
 ### What has done
-- Start of reimplementation in Python what I made in Matlab
+- Start of reimplementation in Python of what I made in Matlab
 
 ### Why
 - I should use Python to rewrite the Matlab code
@@ -75,7 +75,7 @@
 - How to install and use seaborn library
 
 ### What next
-- Continue reimplementation in Python what I made in Matlab
+- Continue the reimplementation in Python of what I made in Matlab
 - Understand the model
 - Learn MAP
 - Learn optimization processes
@@ -93,6 +93,25 @@
 
 ### What next
 - Multivariate Gaussian distribution in Python using my own pdf function
+- Understand the model
+- Learn MAP
+- Learn optimization processes
+
+## 04.05.16
+### What has done
+- Got access to the lab
+- Added some comments to Jyputer about multivariate Gaussian distribution
+- Implementation of multivariate Gaussian distribution function
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- How to scale plots in Python
+- How to write equations in LaTeX
+
+### What next
+- Finish the reimplementation in Python of what I made in Matlab
 - Understand the model
 - Learn MAP
 - Learn optimization processes
