@@ -101,7 +101,7 @@
 ### What has done
 - Got access to the lab
 - Added some comments to Jyputer about multivariate Gaussian distribution
-- Implementation of multivariate Gaussian distribution function
+- Multivariate Gaussian distribution function implementation
 
 ### Why
 - I should use Python to rewrite the Matlab code
@@ -112,6 +112,22 @@
 
 ### What next
 - Finish the reimplementation in Python of what I made in Matlab
+- Understand the model
+- Learn MAP
+- Learn optimization processes
+
+## 05.05.16
+### What has done
+- Finished multivariate Gaussian distribution function implementation
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- Be careful with array indexes in Python
+- Cholesky factorization in Python
+
+### What next
 - Understand the model
 - Learn MAP
 - Learn optimization processes
