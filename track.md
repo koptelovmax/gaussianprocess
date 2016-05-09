@@ -131,3 +131,21 @@
 - Understand the model
 - Learn MAP
 - Learn optimization processes
+
+## 09.05.16
+### What has done
+- Example with non-stochastic kernel and noisy covariance matrix
+- Conditional version used my multivariate distribution function
+
+### Why
+- I should use Python to rewrite the Matlab code
+
+### What has learned
+- Difference between lists and arrays and how to convert one to another
+- Some new array operations (diag, reshape, eye)
+- Be careful with variables names when run different cells with code
+
+### What next
+- Understand the model
+- Learn MAP
+- Learn optimization processes
