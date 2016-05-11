@@ -150,7 +150,6 @@
 - Learn MAP
 - Learn optimization processes
 
-
 ## 10.05.16
 ### What has done
 - General understanding of the model
@@ -162,6 +161,25 @@
 - There are two main steps: DT modelling and DT syntesis
 - DT modelling consists of two steps: Dimensionality reduction and Dynamical modeling
 - Gaussian Process is used during all the steps: to infer the reduction function, to model DT and to generate new data
+
+### What next
+- Try to understand the code
+- Learn first-order Markov model
+- Learn MAP
+- Learn optimization processes
+
+## 11.05.16
+### What has done
+- Deeper understanding of the model
+- Little review of the model in Jupyter notebook
+
+### Why
+- I'm supposed to understand what I need to do
+
+### What has learned
+- To achive nonlinear mapping in dimensionality reduction step special covariance function is used
+- In dynamic texture modeling step the kernel matrix of latent mapping constructed by multi-kernel function
+- Dynamic texture syntesis can be done by estimating necessary parameters and then by predicting new sequence of dynamic texture
 
 ### What next
 - Try to understand the code
