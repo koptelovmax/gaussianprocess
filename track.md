@@ -186,3 +186,23 @@
 - Learn first-order Markov model
 - Learn MAP
 - Learn optimization processes
+
+## 12.05.16
+### What has done
+- Undestanding of the preprocessing part of the code
+- Preprocessing of input video (resize, b&w an save as an flat array) using OpenCV
+
+### Why
+- It is essential to make preprocessing of input video
+
+### What has learned
+- How to install OpenCV to use with Jupyter Notebook
+- How to open and display video in Jupyter Notebook
+- How to resize and grayscale video using OpenCV
+- How to convert video to a flatten array
+
+### What next
+- Try to understand the code next
+- Learn first-order Markov model
+- Learn MAP
+- Learn optimization processes
