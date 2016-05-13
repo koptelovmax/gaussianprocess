@@ -206,3 +206,26 @@
 - Learn first-order Markov model
 - Learn MAP
 - Learn optimization processes
+
+## 13.05.16
+### What has done
+- Meeting with supervisers
+
+### Why
+- To discuss directions I should follow and getting answers to my questions
+
+### What has learned
+- Stationary process - correlation depends on distance between two points only
+- There is no dependency between original frames
+- First order Markov model is Markov process depending on previous state only
+- Which parameters we need to estimate first (X, Theta and labda)
+- Function we must optimize (equations 11 and 12 in the paper)
+- Some Python tricks (how to do matrix operations)
+
+### What next
+- Use Matlab to understand synthesis procedure
+- Understand what to estimate and how
+- Try to estimate some missing frames
+- Evaluation of the model by prediction and interpolation
+- Find the limit of the model
+- If have time find good Gaussian process library for Python and try to reimplement code
