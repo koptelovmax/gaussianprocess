@@ -229,3 +229,24 @@
 - Evaluation of the model by prediction and interpolation
 - Find the limit of the model
 - If have time find good Gaussian process library for Python and try to reimplement code
+
+## 16.05.16
+### What has done
+- Multivariate Gaussian distribution using matrix notations
+- General learning algorithm understanding, making little review with steps
+
+### Why
+- I still want to reimplement the code in Python
+- It is important to understand the algorithm
+
+### What has learned
+- We use PCA to do initialization
+- First fix W and find maximum values of X, theta, lambda, only then optimize W
+
+### What next
+- Use Matlab to understand synthesis procedure
+- Understand what to estimate and how
+- Try to estimate some missing frames
+- Evaluation of the model by prediction and interpolation
+- Find the limit of the model
+- If have time find good Gaussian process library for Python and try to reimplement code
