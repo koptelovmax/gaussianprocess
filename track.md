@@ -245,8 +245,24 @@
 
 ### What next
 - Use Matlab to understand synthesis procedure
-- Understand what to estimate and how
 - Try to estimate some missing frames
 - Evaluation of the model by prediction and interpolation
 - Find the limit of the model
 - If have time find good Gaussian process library for Python and try to reimplement code
+
+## 17.05.16
+### What has done
+- Little review about code understanding
+- Preprocessing function to make a video from rendered set of frames
+
+### Why
+- It is important to understand the algorithm
+- I want to see the result of some test syntesises
+
+### What has learned
+- It is necessary to limit the size of frames, otherwise Out of memory problem can be faced
+
+### What next
+- Understand optimization functions used in code
+- Missing frames estimation
+- Model evaluation
