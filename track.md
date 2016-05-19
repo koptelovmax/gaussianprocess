@@ -266,3 +266,39 @@
 - Understand optimization functions used in code
 - Missing frames estimation
 - Model evaluation
+
+## 18.05.16
+### What has done
+- Little help about functions used in original code
+
+### Why
+- It is important to understand the algorithm
+
+### What has learned
+- As first optimization the library function is used, for the second - own implementation
+- How to write text in color in Markdown
+
+### What next
+- Think how to represent missing frame in original set Y
+- Missing frames estimation
+- Model evaluation
+- Look for functions and libraries for Python
+
+## 19.05.16
+### What has done
+- Some ideas how to represent missing frames in original dataset Y
+- Understanding of how SCG function in Matlab works 
+
+### Why
+- It is required to make an evaluation of the model
+- I can't do frame estimation without understanding of optimization
+
+### What has learned
+- For both optimizations SCG function is used which is different from the algorithm
+- We can put 0 in the frames which we want to miss and it still works
+- PCA with 0 frames works fine for the initialization
+
+### What next
+- Which functions exactly do we need to optimize?
+- Functions and libraries for Python
+- Model evaluation
