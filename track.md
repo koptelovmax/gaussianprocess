@@ -302,3 +302,21 @@
 - Which functions exactly do we need to optimize?
 - Functions and libraries for Python
 - Model evaluation
+
+## 20.05.16
+### What has done
+- Understanding of which functions exactly do I need to optimize
+- Little review about it
+- Starting of reimplementation code in Python
+
+### Why
+- It is important to understand the algorithm
+- It is a good way to unerstand how it works throw reimplementation
+
+### What has learned
+- Dimensionalities of all variables used in functions I need to optimize
+- How to perform PCA in Python
+
+### What next
+- Continue to reimplement the code
+- Model evaluation

@@ -19,3 +19,8 @@
 - floor, ceil
 - reshape an array into the matrix
 - Save data back to video file
+
+# List of tools I need to find
+- PCA
+- CSG optimization function
+- Kernel functions
