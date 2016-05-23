@@ -320,3 +320,21 @@
 ### What next
 - Continue to reimplement the code
 - Model evaluation
+
+## 23.05.16
+### What has done
+- Implementation of mk_likelihood, weight_likelihood functions
+- Understanding of gradient of L with respect to X and Theta, Lambda
+- Templates for mk_gradient, weight_gradient functions
+
+### Why
+- It is a good way to unerstand how the code works throw reimplementation
+
+### What has learned
+- Some approaches of how to compute gradients
+
+### What next
+- Write functions to compute Kx and Ky
+- Search for kern gradients
+- Finish functions weight_gradient, mk_gradient
+- Find SCG optimization function and perform it
