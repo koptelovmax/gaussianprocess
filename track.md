@@ -338,3 +338,19 @@
 - Search for kern gradients
 - Finish functions weight_gradient, mk_gradient
 - Find SCG optimization function and perform it
+
+## 24.05.16
+### What has done
+- K_x, K_y, mk_gradient functions
+
+### Why
+- It is a good way to unerstand how the code works throw reimplementation
+
+### What has learned
+- They compute K and K^(-1) in the function at the same time
+- Kronecker delta
+
+### What next
+- Recheck dimensionalities of all optimization function parameters
+- Search for kern functions and kern gradients libraries
+- Find SCG optimization function and perform it
