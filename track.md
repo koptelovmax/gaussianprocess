@@ -354,3 +354,21 @@
 - Recheck dimensionalities of all optimization function parameters
 - Search for kern functions and kern gradients libraries
 - Find SCG optimization function and perform it
+
+## 25.05.16
+### What has done
+- Recheck and fix of dimensionalities of functions and gradients
+
+### Why
+- Without this information I cannot get proper algorithm understanding
+
+### What has learned
+- Ky is NxN, while Kx is (N-1)x(N-1), where N - number of artificial frames
+- Both functions we need to optimize are 1x1, because they are probabilities
+- All the gradients have different dimensionalities (see review)
+- Inverse of non-square matrix can be conputed throw singular value decomposition
+
+### What next
+- Update the review
+- Search for kern functions and kern gradients libraries
+- Find proper SCG optimization function and perform it
