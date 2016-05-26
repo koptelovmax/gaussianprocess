@@ -372,3 +372,17 @@
 - Update the review
 - Search for kern functions and kern gradients libraries
 - Find proper SCG optimization function and perform it
+
+## 26.05.16
+### What has done
+- Update of the review
+- Ky function reimplementation
+
+### Why
+- I must understand how it works
+
+### What has learned
+
+### What next
+- Search for kern functions and kern gradients libraries
+- Find proper SCG optimization function and perform it
