@@ -377,12 +377,14 @@
 ### What has done
 - Update of the review
 - Ky function reimplementation
+- GPy framework installation
 
 ### Why
 - I must understand how it works
 
 ### What has learned
+- How to import kernels from GPy
 
 ### What next
-- Search for kern functions and kern gradients libraries
+- Use kern functions and kern gradients from GPy
 - Find proper SCG optimization function and perform it
