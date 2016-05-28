@@ -388,3 +388,23 @@
 ### What next
 - Use kern functions and kern gradients from GPy
 - Find proper SCG optimization function and perform it
+
+## 27.05.16
+### What has done
+- Meeting with superviser
+
+### Why
+- To discuss directions I should follow and getting answers to my questions
+
+### What has learned
+- Gradient of a function with one parameter is vector, with more parameters is matrix
+- To check a gradient function I can use gradient checking module
+- To estimate a missing frame I need N frames in X and N-1 frames in Y
+
+### What next
+- Store values mean and standard deviation
+- Function to plot a frame
+- Program to generate a video and to track a motion of X in 2D case
+- Finish implementation of Kx, Ky, likelihood functions and gradients
+- Find proper SCG optimization function and perform it
+- Missing frame estimation using Matlab
