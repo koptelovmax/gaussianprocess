@@ -404,7 +404,25 @@
 ### What next
 - Store values mean and standard deviation
 - Function to plot a frame
-- Program to generate a video and to track a motion of X in 2D case
 - Finish implementation of Kx, Ky, likelihood functions and gradients
+- Program to generate a video and to track a motion of X in 2D case
+- Find proper SCG optimization function and perform it
+- Missing frame estimation using Matlab
+
+## 30.05.16
+### What has done
+- Store values mean and standard deviation, function to plot a frame
+- Implementation of Kx, Ky, likelihood functions and tests
+
+### Why
+- It is a good way to unerstand how the code works throw reimplementation
+
+### What has learned
+- How to use kernel functions from GP library
+
+### What next
+- Solve the problem with Kronecker delta (try on paper)
+- Finish gradients functions and perform tests
+- Program to generate a video and to track a motion of X in 2D case
 - Find proper SCG optimization function and perform it
 - Missing frame estimation using Matlab
