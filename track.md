@@ -426,3 +426,21 @@
 - Program to generate a video and to track a motion of X in 2D case
 - Find proper SCG optimization function and perform it
 - Missing frame estimation using Matlab
+
+## 31.05.16
+### What has done
+- Gradient test module to check gradients
+
+### Why
+- I need to use gradients and to test it somehow
+
+### What has learned
+- Lambda function is an anonymous function (that are not bound to a name)
+- How to compute gradient of a kernel function using GPy
+- How to use GPy.models.GradientChecker
+
+### What next
+- Finish gradients functions and perform tests
+- Program to generate a video and to track a motion of X in 2D case
+- Find proper SCG optimization function and perform it
+- Missing frame estimation using Matlab
