@@ -444,3 +444,22 @@
 - Program to generate a video and to track a motion of X in 2D case
 - Find proper SCG optimization function and perform it
 - Missing frame estimation using Matlab
+
+## 1.06.16
+### What has done
+- Function 1 gradient wrt X dimensionality analysis and code implementation
+- Video generator implementation starting
+
+### Why
+- It is necessary to use gradients
+- I want to perform a test of the given model
+
+### What has learned
+- How to check gradient of any function in lambda mode
+- How to sum up kernels and compute gradient afterwards
+
+### What next
+- Function 2 gradient wrt W - find similarly analiticaly
+- Find SCG optimization function and perform on function 2 first
+- Finish Video generator implementation
+- Missing frame estimation using Matlab
