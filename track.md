@@ -463,3 +463,19 @@
 - Find SCG optimization function and perform on function 2 first
 - Finish Video generator implementation
 - Missing frame estimation using Matlab
+
+## 6.06.16
+### What has done
+- Function 2 gradient wrt W derivative and implementation
+
+### Why
+- It is necessary to use gradients
+
+### What has learned
+- How to derive gradients analiticaly
+
+### What next
+- Function 2 gradient test
+- Find SCG optimization function and perform on function 2 first
+- Finish Video generator implementation
+- Missing frame estimation using Matlab
