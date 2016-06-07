@@ -479,3 +479,19 @@
 - Find SCG optimization function and perform on function 2 first
 - Finish Video generator implementation
 - Missing frame estimation using Matlab
+
+## 7.06.16
+### What has done
+- Function 2 gradient test
+
+### Why
+- It is necessary to use gradients
+
+### What has learned
+- Gaussian process models in GPy Python library
+- How to draw rectangle in Python using matplotlib
+
+### What next
+- Finish video generator
+- Missing frame estimation using Matlab
+- Try to perform optimization
