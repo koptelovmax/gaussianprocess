@@ -495,3 +495,39 @@
 - Finish video generator
 - Missing frame estimation using Matlab
 - Try to perform optimization
+
+## 8.06.16
+### What has done
+- Meeting with superviser
+
+### Why
+- To discuss directions I should follow and getting answers to my questions
+
+### What has learned
+- Matrix gradients dimensionalities
+- I can remove kernel I don't like and try another one
+- Dinamic texture can be represented in different ways, not necessary with frames
+- There is another approach to learn dinamic texture is to use wavelets
+- I should try Special temporal Gaussian field as well
+
+### What next
+- Finish video generator and perform tests with 2D latent space
+- Find the limit of the model by missing frame estimation
+- Write report and send draft to check
+- If have time try GPLVM model and find difference between the models
+
+## 9.06.16
+### What has done
+- Video generator application
+- Generated one test video
+
+### Why
+- I want to test the model
+
+### What has learned
+- How to plot rectangle, make rotations, crop of the image in OpenCV
+
+### What next
+- Perform tests with 2D latent space
+- Find the limit of the model by missing frame estimation
+- Write report and send draft to check
