@@ -522,7 +522,7 @@
 - Generated one test video
 
 ### Why
-- I want to test the model
+- I should test the model before using it
 
 ### What has learned
 - How to plot rectangle, make rotations, crop of the image in OpenCV
@@ -531,3 +531,18 @@
 - Perform tests with 2D latent space
 - Find the limit of the model by missing frame estimation
 - Write report and send draft to check
+
+## 10.06.16
+### What has done
+- Performed the series of tests in 2D and 1D latent spaces
+
+### Why
+- I should test the model before using it
+
+### What has learned
+- In 1D the result is better rather than in 2D
+
+### What next
+- Try to understand GPLVM model
+- Start writting the report
+- Limit of the model by missing frame estimation
