@@ -212,7 +212,7 @@
 - Meeting with supervisers
 
 ### Why
-- To discuss directions I should follow and getting answers to my questions
+- To discuss directions I should follow and to get answers to my questions
 
 ### What has learned
 - Stationary process - correlation depends on distance between two points only
@@ -394,7 +394,7 @@
 - Meeting with superviser
 
 ### Why
-- To discuss directions I should follow and getting answers to my questions
+- To discuss directions I should follow and to get answers to my questions
 
 ### What has learned
 - Gradient of a function with one parameter is vector, with more parameters is matrix
@@ -501,7 +501,7 @@
 - Meeting with superviser
 
 ### Why
-- To discuss directions I should follow and getting answers to my questions
+- To discuss directions I should follow and to get answers to my questions
 
 ### What has learned
 - Matrix gradients dimensionalities
@@ -540,9 +540,49 @@
 - I should test the model before using it
 
 ### What has learned
-- In 1D the result is better rather than in 2D
+- In 1D the result is better than in 2D
 
 ### What next
 - Try to understand GPLVM model
 - Start writting the report
 - Limit of the model by missing frame estimation
+
+## 13.06.16
+### What has done
+- GPLVM model understanding
+- Meeting with superviser
+
+### Why
+- To get answers to my questions
+- GPLVM is another model not so far from our model
+
+### What has learned
+- How to use GPLVM model in GPy
+- How to predict new X and Y based on learned dynamic texture
+- One possible approach to perform missing frame estimation
+- Without random generator initialization everytime I get the the same values
+
+### What next
+- Check is there initialization of a random generator in the code
+- Try to use all the kernels separately and compare weights and latent variables
+- Plot X wrt to time and try to see some dependancies (like loop etc)
+- Missing frames estimation trow conditions (if it is not possible why?)
+- Implement GPLVM model in a separate file and try to perform frames generation
+
+## 14.06.16
+### What has done
+- Latent frames prediction and Y reconstruction
+- GPLVM model implementation
+
+### Why
+- GPLVM is very similar to our model
+
+### What has learned
+- How to perform optimization with steps limit
+- How to use equations for frames prediction and Y reconstruction
+
+### What next
+- Check is there initialization of a random generator in the code
+- Try to use all the kernels separately and compare weights and latent variables
+- Plot X wrt to time and try to see some dependancies (like loop etc)
+- Missing frames estimation trow conditions (if it is not possible why?)
