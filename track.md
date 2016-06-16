@@ -586,3 +586,39 @@
 - Try to use all the kernels separately and compare weights and latent variables
 - Plot X wrt to time and try to see some dependancies (like loop etc)
 - Missing frames estimation trow conditions (if it is not possible why?)
+
+## 15.06.16
+### What has done
+- Different sample reconstruction techinics
+- Video generation using GPLVM in Python
+
+### Why
+- GPLVM is very similar to our model
+
+### What has learned
+- Reconstruction can be performed by using multivariate gaussian or in matrix forms
+- There is something wrong with this dynamic texture, it doesn't have dinamic at all
+- They don't generate X randomly, that's why texture repeats everytime
+
+### What next
+- Check is there initialization of a random generator in the code
+- Try to use all the kernels separately and compare weights and latent variables
+- Plot X wrt to time and try to see some dependancies (like loop etc)
+- Missing frames estimation trow conditions (if it is not possible why?)
+
+## 16.06.16
+### What has done
+- Performed series of tests to check is it a random process or not
+- Added random initialization
+
+### Why
+- The model is suppose to be about random processes
+
+### What has learned
+- They don't generate X randomly at all
+- They don't use random numbers generator initialization
+
+### What next
+- Try to use all the kernels separately and compare weights and latent variables
+- Plot X wrt to time and try to see some dependancies (like loop etc)
+- Missing frames estimation trow conditions (if it is not possible why?)
