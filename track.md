@@ -615,10 +615,24 @@
 - The model is suppose to be about random processes
 
 ### What has learned
-- They don't generate X randomly at all
+- They don't generate X randomly at all in the code
 - They don't use random numbers generator initialization
 
 ### What next
 - Try to use all the kernels separately and compare weights and latent variables
 - Plot X wrt to time and try to see some dependancies (like loop etc)
 - Missing frames estimation trow conditions (if it is not possible why?)
+
+## 17.06.16
+### What has done
+- Kernel analysis wrt to weights and latent variables
+
+### Why
+- To get answer why do they use different kernels with weights instead of one
+
+### What has learned
+- Some kernels have zero weight, it mostly depends on video
+
+### What next
+- Missing frames estimation trow conditions (if it is not possible why?)
+- Write the report
