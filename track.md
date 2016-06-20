@@ -636,3 +636,22 @@
 ### What next
 - Missing frames estimation trow conditions (if it is not possible why?)
 - Write the report
+
+## 20.06.16
+### What has done
+- Draft of the report
+
+### Why
+- I must submit the report about my research
+
+### What has learned
+- RatQuad, MLP and Matern32 kernels are able to capture dynamic texture, other cannot and provide static textures as a result
+- Comparing between them RatQuad and Matern32 provide better result than MLP
+- Visual quality is different for every sample and depends on dynamic texture itself
+- Model does not use random process to generate new latent variables, as a result repetitions can be seen
+
+### What next
+- Wait for comments for report and fix it
+- Make a program on Python for video index output
+- Try using X from Matlab to generate new X and new Y in Python
+- Organize all the Jupyter pages I made
