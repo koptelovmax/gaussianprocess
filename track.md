@@ -651,7 +651,42 @@
 - Model does not use random process to generate new latent variables, as a result repetitions can be seen
 
 ### What next
-- Wait for comments for report and fix it
+- Wait for comments and fix them
 - Make a program on Python for video index output
 - Try using X from Matlab to generate new X and new Y in Python
 - Organize all the Jupyter pages I made
+
+## 21.06.16
+### What has done
+- Second version of the report
+- GPLVM implementation in Python using mean prediction
+
+### Why
+- I must submit the report about my research
+
+### What has learned
+- How to write Context of the project
+- Mean prediction method gives better result in GPLVM, but too slow
+
+### What next
+- Wait for comments and fix them
+- Make a program on Python for video index output
+- Try using X from Matlab to generate new X and new Y in Python
+- Organize all the Jupyter pages I made
+
+## 22.06.16
+### What has done
+- Meeting with superviser
+
+### Why
+- To get comments to the draft of the report
+
+### What has learned
+- The difference between GPLVM and GP dynamic model
+- What is Gaussian field
+- GPLVM can be improved by using wavelets
+
+### What next
+- Add titels, numbers and axis labels to plots along with references from text
+- Rewrite State of the art, Results and Conclussion and perspectives parts of the report
+- Perform set of experiments to test the instability of Matlab implementation
