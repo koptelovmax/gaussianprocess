@@ -690,3 +690,48 @@
 - Add titels, numbers and axis labels to plots along with references from text
 - Rewrite State of the art, Results and Conclussion and perspectives parts of the report
 - Perform set of experiments to test the instability of Matlab implementation
+
+## 23.06.16
+### What has done
+- First correction of the report
+- set of experiments to test the instability of Matlab implementation
+
+### Why
+- I must submit the report about my research
+
+### What has learned
+- Matlab implementation is not stable
+- Python implementation of GPLVM has surprising results
+
+### What next
+- Finalize and send the report
+
+## 24.06.16
+### What has done
+- Final correction and submitting the report
+
+### Why
+- I must submit the report about my research
+
+### What has learned
+- There are two Gaussian processes at least: X and Y
+- In the paper X and Y - rows, not vectors
+
+### What next
+- Start doing the presentation
+- Try to use GPU to speed up optimization
+
+## 27.06.16
+### What has done
+- The draft of the presentation
+
+### Why
+- I must present my work
+
+### What has learned
+- Presentation can be done in Latex
+
+### What next
+- Try to use GPU to speed up optimization
+- Try to perform optimization with signle kernel (not a combination), check time
+- Perform longer optimization
