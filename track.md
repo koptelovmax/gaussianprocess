@@ -735,3 +735,19 @@
 - Try to use GPU to speed up optimization
 - Try to perform optimization with signle kernel (not a combination), check time
 - Perform longer optimization
+
+## 27.06.16
+### What has done
+- Finishing the presentation
+- Training the presentation in front of classmates
+- Performing one experiment
+
+### Why
+- I must present my work
+
+### What has learned
+- Optimization is faster using just one kernel and the quality of result looks the same
+
+### What next
+- Try to use GPU to speed up optimization
+- Perform longer optimization
