@@ -736,7 +736,7 @@
 - Try to perform optimization with signle kernel (not a combination), check time
 - Perform longer optimization
 
-## 27.06.16
+## 28.06.16
 ### What has done
 - Finishing the presentation
 - Training the presentation in front of classmates
@@ -751,3 +751,52 @@
 ### What next
 - Try to use GPU to speed up optimization
 - Perform longer optimization
+
+## 29.06.16
+### What has done
+- Final version of presentation
+- Training with supervisor and PhD student
+
+### Why
+- I must present my work
+
+### What has learned
+- Covariance function describes some temporal structure
+- Conditional multivariate distribution can be used for interpolation (kriging)
+- Main estimation method used is maximum aposteriori estimation
+- Some kernels are generalization of others thus they can produce instability
+
+### What next
+- Make an experiment using just 3 kernels Poly, RatQuad and MLP to check instability
+- Try to use GPU to speed up optimization
+- Perform longer optimization
+
+## 30.06.16
+### What has done
+- The presentation in front of Jury
+
+### Why
+- I must present my work
+
+### What has learned
+- Plan and try your perfrormance in advance
+
+### What next
+- Make an experiment using just 3 kernels Poly, RatQuad and MLP to check instability
+- Try to use GPU to speed up optimization
+- Perform longer optimization
+
+## 1.07.16
+### What has done
+- Set of experiments using just 3 kernels
+
+### Why
+- Probably we don't need so many kernels
+- Some of the kernels are generalization of others
+
+### What has learned
+- It seems that they use random initialization of kernel weights
+
+### What next
+- Try to use wavelets
+- Lean more about wavelets
