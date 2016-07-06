@@ -800,3 +800,22 @@
 ### What next
 - Try to use wavelets
 - Lean more about wavelets
+
+## 6.07.16
+### What has done
+- Meeting with supervisor
+- Correct way to save video in b&w
+
+### Why
+- To discuss directions I should follow
+- To fix my GPLVM implementation
+
+### What has learned
+- Temporal and spatial representation of wavelets
+- How to normilize video sequence for visualization
+- There are other methods exists: VGPDM, VGPSSM, VGPDS
+
+### What next
+- Evaluation by mean prediction using mean square error
+- Review papers about other models
+- Test other methods (VGPDM, VGPSSM)
