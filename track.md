@@ -819,3 +819,25 @@
 - Evaluation by mean prediction using mean square error
 - Review papers about other models
 - Test other methods (VGPDM, VGPSSM)
+
+## 7.07.16
+### What has done
+- Review of the papers
+- Low-dimensional learning experiment
+- Implementation of 7 different approaches for saving video
+
+### Why
+- To study other models
+- To test given model
+- To have a better visual quality
+
+### What has learned
+- Back-constraints GPLVM conservs local distances from observation space to latent
+- SGPLVM learns scaling factor for each observation-space dimension
+- In VGPDS number of latent dimensions selects automatically
+
+### What next
+- Mean prediction for observed space implementation
+- Mean square error implementation
+- Test other methods (VGPDM, VGPSSM)
+- Visualize syntesis of Y by choosing any X
