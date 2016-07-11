@@ -835,9 +835,51 @@
 - Back-constraints GPLVM conservs local distances from observation space to latent
 - SGPLVM learns scaling factor for each observation-space dimension
 - In VGPDS number of latent dimensions selects automatically
+- We cannot learn anything with just 2 dimensions
 
 ### What next
 - Mean prediction for observed space implementation
 - Mean square error implementation
 - Test other methods (VGPDM, VGPSSM)
 - Visualize syntesis of Y by choosing any X
+
+## 8.07.16
+### What has done
+- Mean prediction for observed space implementation
+- Mean square error implementation in Python
+
+### Why
+- We want to have a criteria to compare different models
+
+### What has learned
+- GPLVM is able to capture and reproduce periodic videos
+- The mean sqare value obtained is high and hard to enterpret
+
+### What next
+- Mean square error implementation in Matlab
+- Test other methods (VGPDM, VGPSSM)
+- Visualize syntesis of Y by choosing any X
+- Missing frame evaluation
+
+## 11.07.16
+### What has done
+- Meeting with supervisor
+- Mean square error implementation in Matlab
+- Normalization and denormalization in MK-GPDM in Matlab
+- Syntesis visualization of Y by choosing any X
+
+### Why
+- To discuss directions I should follow
+- MSE can be used as a tool to compare different implementations and algorithms
+- They do not perform normalization and denormalization in MK-GPDM
+
+### What has learned
+- GPLVM is able to capture and predict periodic textures even without periodic kernel
+- It seems that instability problem is solved
+
+### What next
+- Missing frame evaluation in Matlab
+- Test other methods (VGPDM, VGPSSM)
+- Why is GPLVM is able to predict periodic things?
+- What do we use PCA for: perform initialization of X or Y?
+- Perform series of tests of MK-GPDM instability in Matlab
