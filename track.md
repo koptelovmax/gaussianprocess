@@ -883,3 +883,39 @@
 - Why is GPLVM is able to predict periodic things?
 - What do we use PCA for: perform initialization of X or Y?
 - Perform series of tests of MK-GPDM instability in Matlab
+
+## 12.07.16
+### What has done
+- What do we use PCA for: perform initialization of X or Y
+- Perform series of tests of MK-GPDM instability in Matlab
+- Missing frame evaluation in Matlab
+
+### Why
+- It is important to understand how GPLVM "black box" works
+- It is a good point to fix MK-GPDM implementation
+- We want to create a tool for numerical quality measure and to know the limit of model
+
+### What has learned
+- We use PCA to initialize X and then we correct positions of them
+- MK-GPDM wasn't stable because they performed normalization in a wrong way
+
+### What next
+- Finish missing frame evaluation in Matlab
+- Test other methods (VGPDM, VGPSSM)
+- Why is GPLVM is able to predict periodic things?
+
+## 13.07.16
+### What has done
+- Missing frame evaluation in Matlab
+
+### Why
+- We want to create a tool for numerical quality measure and to know the limit of model
+
+### What has learned
+- To match dimensionalities take X without missed frame to compute term with Y in fuction 1
+- To match dimensionalities drop Y part from function 1 gradient
+
+### What next
+- Test other methods (VGPDM, VGPSSM)
+- Why is GPLVM is able to predict periodic things?
+- Discuss work with supervisors
