@@ -20,7 +20,7 @@ for iters = 1:extIters %每一次迭代，用ME算法的话，迭代的方式可能还是需要的，
 
     params = [X(:)' lnHyperpara_Ky lnHyperpara_Kx];
 
-    [params, options, flog] = scg('mk_likelihood1', params, options, 'mk_gradient2', Y, segments, kern, N, missed);
+    [params, options, flog] = scg('mk_likelihood1', params, options, 'mk_gradient1', Y, segments, kern, N, missed);
     % 利用SCG函数对模型进行求解，得到优化的params参数
         
     % STAGE 2, OPTIMIZE THE WEIGHT PARAMETERS

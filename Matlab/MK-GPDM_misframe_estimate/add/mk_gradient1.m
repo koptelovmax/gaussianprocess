@@ -14,7 +14,7 @@ function g = testgradient(params, Y, segments, kern, N, missed)
 recConst = 1; %GLOBAL_PARA.M_CONST;  % =1 ÓÃÓÚµ÷Õû²ÎÊıbetaÔÚÓÅ»¯¹ı³ÌÖĞËğÊ§º¯ÊıÖĞµÄÏµÊı£¬Ä¬ÈÏÎª1
 lambda   = 1; %GLOBAL_PARA.BALANCE;  % =1£¬ÓÃÓÚB-GPDMÄ£ĞÍ
 
-%%N = size(Y, 1);  % ¹Û²â±äÁ¿µÄÊıÁ¿£¬Ò²ÊÇÒş±äÁ¿µÄÊıÁ¿
+%%N = size(X, 1);  % ¹Û²â±äÁ¿µÄÊıÁ¿£¬Ò²ÊÇÒş±äÁ¿µÄÊıÁ¿
 D = size(Y, 2);  % ¹Û²â±äÁ¿µÄÎ¬¶È
 
 % num_hyperpara_Kx = 4;  % 
@@ -30,6 +30,9 @@ end
 % ÌáÈ¡Òş±äÁ¿X
 Q = floor((length(params)-(num_hyperpara_Kx+3))/N);  % ÖØĞÂÌáÈ¡³öÒş±äÁ¿µÄÎ¬¶È£¬Ò²¾ÍÊÇXµÄÎ¬¶È
 X = reshape(params(1:N*Q), N, Q);                    % °ÑÊı¾İX»¹Ô­³É¾ØÕó
+
+Xmis = X;
+Xmis(missed,:) = [];
 
 % ÌáÈ¡K_yµÄ³¬²ÎÊı
 hyperpara_Ky = exp(params(end-(num_hyperpara_Kx+2):end-num_hyperpara_Kx)); % ÌáÈ¡K_yµÄ³¬²ÎÊı£¬ÊıÁ¿Îª3
@@ -59,8 +62,13 @@ num_Xin = size(Xin, 1); % XinÊı¾İµÄ³¤¶È
 %% ¸ù¾İµ±Ç°²ÎÊıºÍ±äÁ¿¼ÆËãK_yºÍK_x
 
 % ¼ÆËãK_y£¬ÕâÀïÊ¹ÓÃRBFºË,ÔÚ±¾´ÎÊÔÑéÖĞ£¬½«²»¶Ô½µÎ¬¹ı³Ì¿¼ÂÇ¶àºËµÄÇé¿ö
-[Ky, invKy] = computeKernel(X, hyperpara_Ky); % ¼ÆËãºËK_YºÍK_Y^{-1}£¬ÕâÀïÊ¹ÓÃµÄÊÇRBFºË¼ÓÉÏÔëÉùÏî
+[Ky, ~] = computeKernel(X, hyperpara_Ky); % compute Ky with respect to N frames of X 
+[Ky1, invKy] = computeKernel(Xmis, hyperpara_Ky); % compute Ky with respect to N-1 frames of X 
+%
+
 Ky_RBF = Ky - eye(size(X, 1))*1/hyperpara_Ky(end); % ÓÉÓÚGPLVMÖĞµÄcomputeKernelº¯Êı¼ÆËãµÄºË²¿·Ö°üÀ¨ÁËÔëÉùÏî£¬ÕâÀï°ÑÔëÉùÏîÈ¥µô£¬ÖØĞÂ»Ö¸´³É´¿RBFºË,ÓÃÓÚºóÃæÇóµ¼
+Ky_RBF1 = Ky1 - eye(size(Xmis, 1))*1/hyperpara_Ky(end); % ÓÉÓÚGPLVMÖĞµÄcomputeKernelº¯Êı¼ÆËãµÄºË²¿·Ö°üÀ¨ÁËÔëÉùÏî£¬ÕâÀï°ÑÔëÉùÏîÈ¥µô£¬ÖØĞÂ»Ö¸´³É´¿RBFºË,ÓÃÓÚºóÃæÇóµ¼
+
 
 % ¼ÆËãK_x£¬ÕâÀïÊ¹ÓÃµÄÊÇRBFºË¼ÓÉÏÏßĞÔºË£¬ÔÚÎÒÃÇµÄÊµÑéÖĞĞèÒª°ÑÕâ¸ö²¿·Ö¸Ä³É¶àºËµÄĞÎÊ½
 [~, sumKern]= mk_computeCompoundKernel(kern,Xin);
@@ -80,7 +88,7 @@ invKx = pdinv(sumKern);
 % SECTION (1) ¼ÆËãËğÊ§º¯ÊıL¶Ô³¬²ÎÊıhyperpara_KyµÄÌİ¶È (×îºó¼ì²é¹«Ê½)
 
 % ¼ÆËã dL / dKy
-dL_dKy = -D/2*invKy + .5*invKy*invKy; % (!) Y*Y' is removed
+dL_dKy = -D/2*invKy + .5*invKy*(Y*Y')*invKy; % Õâ¸öºÍ¹«Ê½ÊÇ¶ÔÓ¦µÄÉÏµÄ
 
 % ÓÉÓÚÔÚmkÄ£ĞÍÖĞÃ»ÓĞÎªÃ¿¸öÎ¬¶ÈÉè¼ÆÒ»¸öÈ¨ÖØ£¬ËùÒÔÕâÀï²»¿¼ÂÇw
 % Yscaled = Y;
@@ -90,7 +98,7 @@ dL_dKy = -D/2*invKy + .5*invKy*invKy; % (!) Y*Y' is removed
 % dL_dK = -D/2*invKy + .5*invKy*(Yscaled*Yscaled')*invKy; % Õâ¸öºÍ¹«Ê½ÊÇ¶ÔÓ¦µÄÉÏµÄ
 
 % ¼ÆËã dKy / d hyperpara_Ky 
-[dK{1}, dK{2}] = kernelDiffParams(X, X, hyperpara_Ky, Ky_RBF); % hyperpara_KyÖĞ°üº¬3¸ö³¬²ÎÊı£¬ÆäÖĞÍ·Á½¸öÊÇRBFºËµÄ³¬²ÎÊı£¬µÚÈı¸öÊÇÔëÉùÏîµÄ³¬²ÎÊı£¬ÕâÀï·Ö¿ª¼ÆËã
+[dK{1}, dK{2}] = kernelDiffParams(Xmis, Xmis, hyperpara_Ky, Ky_RBF1); % use Xmis instead of X to match dimensionalities
 
 % ÀûÓÃÁ´Ê½·¨Ôò°ÑL¶Ôhyperpara_KyµÄÌİ¶ÈËã³öÀ´
 dk = zeros(1, 3); % Ó¦¸ÃÊÇK_YÖĞ³¬²ÎÊıµÄµ¹Êı£¬ÒòÎªÊıÁ¿ÊÇ3¸ö,ĞèÒªÌØ±ğËµÃ÷Ò»ÏÂµÄ¾ÍÊÇ dk(1)¶ÔÓ¦µÄÊÇbeta2µÄÌİ¶È£¬dk(2)¶ÔÓ¦µÄÊÇbeta1Ìİ¶È
@@ -129,11 +137,14 @@ grad_Kx_HyperParam = dk.*hyperpara_Kx - 1; % ¶ÔÃ¿Ò»¸ö²ÎÊı¼ÓÁËÒ»¸öÈ¨ÖØÏî£¬Çø±ğÓÚ¹
 % SECTION (3) ¼ÆËãËğÊ§º¯ÊıL¶ÔÒş±äÁ¿XµÄÌİ¶È£¬°üÀ¨Èı¸ö²¿·Ö£¬·Ö±ğÊÇdKy£¬dKxºÍXout (×îºó¼ì²é¹«Ê½)
 
 % ¼ÆËãLÖĞdKy²¿·Ö¶ÔXµÄÌİ¶È£¬ÀûÓÃÁ´Ê½·¨Ôò£¬¼ÆËãdL / dKy * dKy / dX
-dL_dx = zeros(N, Q);  % ËÆÈ»º¯Êı¶ÔÒş±äÁ¿Ä£ĞÍÇóÆ«µ¼£¬
+N1 = size(Xmis,1);
+dL_dx = zeros(N-1, Q);  % ËÆÈ»º¯Êı¶ÔÒş±äÁ¿Ä£ĞÍÇóÆ«µ¼£¬
 for d = 1:Q
-    Kpart = kernelDiffX(X, hyperpara_Ky, d, Ky_RBF); % Ö±½ÓÊÇdK_y/dxµÄº¯Êı£¬µ«ÊÇĞèÒªÃ¿Ò»¸öÎ¬¶ÈµÄÇó
+    Kpart = kernelDiffX(Xmis, hyperpara_Ky, d, Ky_RBF1); % Ö±½ÓÊÇdK_y/dxµÄº¯Êı£¬µ«ÊÇĞèÒªÃ¿Ò»¸öÎ¬¶ÈµÄÇó
     dL_dx(:, d) = 2*sum(dL_dKy.*Kpart, 2) - diag(dL_dKy).*diag(Kpart); % dL_dx = dL/dK * dK_y/dx µ«ÊÇÕâÀï¼õÈ¥¶Ô½ÇÕó²»ÖªµÀÊ²Ã´ÒâË¼,ÔÚÊÔÑéÖĞ£¬KpartµÄËùÓĞ¶Ô½¹ÔªËØÈ«²¿¶¼ÊÇ0£¬ËùÒÔÕâÀïÒ²¾ÍÃ»ÓĞ¼õÈ¥ÈÎºÎÖµ
 end
+
+dL_dx = [dL_dx(1:missed-1,:); zeros(1,Q); dL_dx(missed:end,:)];
 
 % ¼ÆËãLÖĞdKx²¿·Ö¶ÔXinµÄÌİ¶È£¬ÀûÓÃÁ´Ê½·¨Ôò£¬¼ÆËãdL / dKx * dKx / dxin (Î¬¶ÈN-1),ÕâÀïĞŞ¸ÄÁË
 dL_dxin = zeros(num_Xin, Q); % ËğÊ§º¯Êı¶ÔXinÇóµ¼
@@ -152,13 +163,17 @@ end
 % ¼ÆËãLÖĞXout²¿·Ö¶ÔXµÄÌİ¶È£¬dL / dXout = 1/2 (Kx^{-1}*Xout + Kx^{-T}*Xout),È»ºó°´ÕÕÎ¬¶È°Ñ
 % dL/dXout + dL/dXin ºÏ²¢µ½Ò»Æğ£¬ĞÎ³ÉÒ»¸ö³¤¶ÈÎªNÎ¬µÄÌİ¶ÈÏòÁ¿£¬dL / dXout = -lambda*invKx*Xout
 dLp_dx = mk_priorDiffX(dL_dxin, -lambda*invKx*Xout, N, Q, segments); % ¼òµ¥µÄËµ£¬×öÁËÒ»¼şÊÂÇé£¬¾ÍÊÇ°Ñ dLp_dxin + dLp_dxout£¬¼ÓµÄÊ±ºò°´ÕÕ¶ÔÓ¦µÄÎ»ÖÃ£¬ÕâÀïµÄdLp_dxoutÉè¶¨Îª-lambda*invKp*Xout
-
 dLp_dx(segments,:) = dLp_dx(segments,:) - lambda*X(segments,:); % dLp_dx{1} = dLp_dx{1}¼õÈ¥³õÊ¼»¯XµÄt=1Î»ÖÃµÄÖµ£¬Õâ¸ö²½ÖèµÄÒâÒå²»Çå³ş
 
+%dLp_dx(100,:) = [];
 %
 dL_dx = dL_dx + dLp_dx; % dK_Y/d_xin + dK_X/d_xin
 
 gX= dL_dx(:)';
+
+size(gX)
+size(grad_Ky_HyperParam)
+size(grad_Kx_HyperParam)
 
 %% ×îºó°ÑËùÓĞµÄÌİ¶È»ã×Üµ½Ò»Æğ
 g = -[gX(:)' grad_Ky_HyperParam grad_Kx_HyperParam]; % gÖĞ¼ä°üº¬ÁË¶ÔÒş±äÁ¿Çóµ¼µÄÊıÖµ½á¹û£¬Á½¸ö³¬²ÎÊıµÄÊıÖµ½á¹û

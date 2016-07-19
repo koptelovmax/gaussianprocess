@@ -919,3 +919,42 @@
 - Test other methods (VGPDM, VGPSSM)
 - Why is GPLVM is able to predict periodic things?
 - Discuss work with supervisors
+
+## 18.07.16
+### What has done
+- Meeting with supervisor
+- Fix of missing frame evaluation implementation (now it holds Y)
+
+### Why
+- To discuss missing frame evaluation results and fix the implementation
+
+### What has learned
+- Y is important in gradients computation, I cannot remove it
+- How to perform linear interpolation for more than one missing frame
+
+### What next
+- Try different baselines (previous/next frame, just PCA), compare errors
+- Try different videos/frames, compare errors
+- Learn and test VGPSSM and VGPDM
+- Try to compare different methods to predict missing frame
+- If have time finish MK-GPDM implementation in Python
+
+## 19.07.16
+### What has done
+- VGPSSM review and test
+- VGPDS review
+
+### Why
+- To study other models to find the best one in terms of visual quality
+
+### What has learned
+- VGPSSM is a model to describe dynamic systems, generalization of Markov Models in continious space
+- VGPSSM toolbox performs marginalizing only and can't be used for our purposes
+- Bayesian GP-LVM is an extension of GP-LVM where the latent space is approximately marginalised out
+- VGPDS can be seen as a supervised version of the Bayesian GP-LVM
+
+### What next
+- Try different baselines (previous/next frame, just PCA), compare errors
+- Try different videos/frames, compare errors
+- Try to compare VGPSSM and MK-GPDM to predict missing frame
+- If have time finish MK-GPDM implementation in Python
