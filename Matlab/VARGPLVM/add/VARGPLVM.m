@@ -10,17 +10,17 @@ if ~exist('indPoints', 'var'), indPoints = 100; end
 if ~exist('latentDim', 'var'), latentDim = 20; end
 % Define a temporal model
 if ~exist('dynamicsConstrainType', 'var'), dynamicsConstrainType = {'time'}; end
-if ~exist('initVardistIters', 'var'), initVardistIters = 20; end
+if ~exist('initVardistIters', 'var'), initVardistIters = 100; end
 if ~exist('itNo', 'var'), itNo = [50 50]; end
-%if ~exist('dynamicKern', 'var'), dynamicKern = {'rbf','white','bias'}; end
-if ~exist('dynamicKern', 'var'), dynamicKern = {'rbf','white','lin'}; end
+if ~exist('dynamicKern', 'var'), dynamicKern = {'rbf','white','bias'}; end
+%if ~exist('dynamicKern', 'var'), dynamicKern = {'rbf','white','lin'}; end
 if ~exist('makePlot', 'var'), makePlot = true; end
 
 %! Load DT sequences as training samples
 texture_name = 6; 
 im_width = 120;
 im_height = 90;
-predFrames = 250;
+predFrames = 500;
 videoSize = [im_width im_height];
 
 load(strcat(num2str(texture_name),'.mat'));
@@ -75,6 +75,55 @@ end
 % model = vargplvmOptimiseModel(model, true, true, {initVardistIters, itNo}, true);
 
 %% Plot the fit
+%{
 if ~isempty(dynamicsConstrainType) && makePlot
     vgpdsPlotFit(model, [], 1:model.d, 6);
 end
+%}
+
+%% Prediction
+% Perform prediction of new X
+K_x = kernCompute(model.dynamics.kern, model.X(1:end-1,:));
+invKx = pdinv(K_x);
+
+X_synt = zeros(predFrames,model.q);
+X_last = model.X(end,:);
+
+for i = 1:predFrames
+    X_synt(i,:) = predictNewLatentFrame(model.X,model.dynamics.kern,invKx,X_last);
+    X_last = X_synt(i,:);
+end
+
+plot(X_synt);
+
+% Perform syntesis of dynamic texture based on predicted X
+Y_synt = zeros(predFrames,D);
+
+K_y = kernCompute(model.kern, model.X);
+invKy = pdinv(K_y);
+
+K_yy = kernCompute(model.kern, model.X, X_synt);
+K_y2 = kernCompute(model.kern, X_synt, X_synt);
+
+meann = Y'*invKy*K_yy;
+cov = K_y2 - (K_yy'*invKy*K_yy);
+
+for i = 1:D
+    Y_synt(:,i) = (cov*randn(predFrames,1)) + meann(i,:)';
+end
+
+%% Denormalization
+Y_synt_denorm = floor(Y_std * Y_synt + Y_mean);
+
+synth_Result(1:predFrames) = struct('frame', zeros(im_height, im_width, 'uint8'));
+
+for t = 1:predFrames
+   I = Y_synt_denorm(t,:);
+   I_min = min(I(:));
+   I_max = max(I(:));
+   I = (255/(I_max - I_min))*(I - I_min);   
+   synth_Result(t).frame = reshape(uint8(I),im_height,im_width);
+end
+
+%% Output the results
+save('synth_Result.mat','synth_Result');

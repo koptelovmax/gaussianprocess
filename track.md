@@ -964,7 +964,7 @@
 - VGPDS test
 
 ### Why
-- To find the best one in terms of visual quality
+- To find the best model in terms of visual quality
 
 ### What has learned
 - ARD is automatic dimensionality detection feauture for kernel function
@@ -976,3 +976,22 @@
 - Try different baselines (previous/next frame, just PCA), compare errors
 - Try different videos/frames, compare errors
 - Try to compare VGPSSM and MK-GPDM to predict missing frame
+
+## 21.07.16
+### What has done
+- VGPDS prediction of X and syntesis of Y implementation
+- Visual comparision of VGPDS and MK-GPDM
+
+### Why
+- To find the best model in terms of visual quality
+
+### What has learned
+- Visual result of VGPDS is not good at all comparing to MK-GPDM
+- It's static almost all the time, something is wrong with optimization
+
+### What next
+- Implement MSE computation for VGPDS
+- MSE comparision between MK-GPDM and VGPDS
+- Try to continue MK-GPDM implementation in Python
+- Try different baselines (previous/next frame, just PCA), compare errors
+- Try different videos/frames, compare errors
