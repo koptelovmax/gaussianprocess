@@ -995,3 +995,58 @@
 - Try to continue MK-GPDM implementation in Python
 - Try different baselines (previous/next frame, just PCA), compare errors
 - Try different videos/frames, compare errors
+
+## 22.07.16
+### What has done
+- MSE computation implementation for VGPDS
+- MSE comparision between MK-GPDM and VGPDS
+- Last frame estimation implementation for MK-GPDM, GPLVM, VGPDS
+
+### Why
+- To find the best model in terms of visual quality
+- To find an evaluation criteria to compare different models
+
+### What has learned
+- VGPDS implementation is not flexible to different textures and kernels
+
+### What next
+- Comparision MSE of GPLVM, MK-GPDM and VGPDS
+- Comparision of missing frame estimation
+- Try to continue MK-GPDM implementation in Python
+
+## 25.07.16
+### What has done
+- Set of experiments (comparision MSE of GPLVM, MK-GPDM and VGPDS)
+- Set of experiments (comparision of missing frame estimation)
+
+### Why
+- To find the best model in terms of visual quality
+- To try and compare different evaluation criteria
+
+### What has learned
+- MSE does not mean much for evaluation
+- One model provides best result for one texture while other provides best for other
+
+### What next
+- Meeting with supervisor to discuss the results
+- Try to continue MK-GPDM implementation in Python
+
+## 26.07.16
+### What has done
+- Meeting with supervisor
+
+### Why
+- To discuss the results and last points I should do to finalize this research
+
+### What has learned
+- VGPSSM implementation iterationaly shows learning of latent space by marginalyzing indusing points
+- MK-GPDM uses GP to model transitions of X, while VGPDS uses GP to model appearance of X in timeline t
+- Thus we cannot use mean prediction equations from MK-GPDM to synthesise Y in VGPDS
+- Inducing points are randomly chosen observed frames which help to speed up computations 
+- To generate new Y based on predicted X in VGPDS another equation must be used (with indusing points)
+
+### What next
+- Fix VGPDS implementation to be able to predict m from N-m observed frames
+- Perform comparision of methods
+- Write master report
+- Update github and write readme files
