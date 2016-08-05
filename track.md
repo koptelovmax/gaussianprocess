@@ -1050,3 +1050,16 @@
 - Perform comparision of methods
 - Write master report
 - Update github and write readme files
+
+## 5.08.16
+### What has done
+- Master report
+
+### Why
+- Report is a good way to save and share the results
+
+### What has learned
+- See report
+
+### What next
+- Try to finish MK-GPDM reimplementation in Python
